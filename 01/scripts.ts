@@ -9,3 +9,6 @@ type Usuario = {
 const cadastrarUsuário = (info: Usuario): Usuario => {
     return info;
 }
+
+type NovoUsuarioSemRg = Omit<Usuario, 'rg'>;
+type UsuarioCamposObrigatorios = Required<NovoUsuarioSemRg>;
